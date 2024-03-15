@@ -88,10 +88,12 @@ export default function App() {
               <div className="checkBox" key={item.id}>
                 <input
                   type="checkbox"
+                  id={`checkbox-${item.id}`}
+                  name={`checkbox-${item.id}`}
                   checked={item.state}
                   onChange={() => handleCheckBox(item.id)}
                 />
-                <label>{item.title}</label>
+                <label htmlFor={`checkbox-${item.id}`}>{item.title}</label>
               </div>
             );
           })}
